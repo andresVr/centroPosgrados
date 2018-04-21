@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="CentroPosgrados.Pages.ContactUsPage"
+     BackgroundColor="{StaticResource BackgroundColorPages}"
+    Title="Contáctanos">
+    <ScrollView>
+        <StackLayout Padding="8">
+            <Label Text="Tienes alguna duda?" FontSize="25" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+            <Label Text="Escribenos estaremos gustosos en ayudarte!" FontAttributes="Italic"></Label>
+            <Button
+            BackgroundColor="{StaticResource MainColor}"
+            TextColor="{StaticResource FontColorMenu}"
+            Text="Escribir Mensaje"
+            Clicked="emailClick"
+            ></Button>
+            <Button
+            BackgroundColor="{StaticResource MainColor}"
+            TextColor="{StaticResource FontColorMenu}"
+            Text="Llamar"
+            Clicked="phoneCallClick"    >
+            </Button>
+            <Label Text="*No olvides digitar la extensión 2550" FontSize="12"></Label>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

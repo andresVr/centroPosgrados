@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:infra="clr-namespace:CentroPosgrados.Infraestructure;assembly=CentroPosgrados"
+    x:Class="CentroPosgrados.App">
+	<Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#002e6d</Color>
+            <Color x:Key="Accent">#002e6d</Color>
+                     <!--General Colors-->
+            <Color x:Key="MainColor">#255185</Color>
+            <Color x:Key="FontColor">#ffffff</Color>
+            <Color x:Key="MainPageColor">#000000</Color>
+            <Color x:Key="AceleratorColor">#172934</Color>
+            <Color x:Key="BackgroundColor">#ffffff</Color>
+            <Color x:Key="BackgroundColorPages">#ffffff</Color>
+            <!--General Colors-->
+            <Color x:Key="MenuColor">#132A45</Color>
+            <Color x:Key="FontColorMenu">#ffffff</Color>
+            <Color x:Key="IconColorMenu">#F37122</Color>
+            <Color x:Key="ButtonColor">#fa8d29</Color>
+            <Color x:Key="Footer">#ffb52c</Color>
+
+            <!--Locator-->
+            <infra:InstanceLocator x:Key="Locator"></infra:InstanceLocator>
+            
+   
+        </ResourceDictionary>
+	</Application.Resources>
+</Application>

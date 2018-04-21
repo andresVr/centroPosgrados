@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="CentroPosgrados.Pages.EspePage"
+    Title="Mi Espe">
+    <ContentPage.Content>
+         <StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="10">
+                <Button  HorizontalOptions="Start" Text="Atrás" Image="ic_action_back" Margin="0" Clicked="backClicked"  BorderRadius="25" TextColor="{StaticResource BackgroundColor}" BackgroundColor="Transparent" BorderColor="Transparent" />
+            </StackLayout>
+            <WebView x:Name="Browser" WidthRequest="1000" HeightRequest="1000" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

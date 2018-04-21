@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PosgradosIOS.Pages.MenuPage"
+    Title="Menú"
+    Icon="ic_action_dehaze"
+    BackgroundColor="{StaticResource MenuColor}"
+    BindingContext="{Binding main, Source={StaticResource Locator}}">
+   <ListView 
+        ItemsSource="{Binding Menu}"
+        HasUnevenRows="false"
+        BackgroundColor="{StaticResource MenuColor}" SeparatorColor="{StaticResource BackgroundColorPages}">
+        <ListView.Header>
+            <StackLayout Padding='40,40,40,30'>
+                <Image
+                Source="menuBase.png"
+                ></Image>
+            </StackLayout>
+        </ListView.Header>
+        <ListView.Footer>
+            <StackLayout Padding='10,10,10,30'
+                HorizontalOptions="Center"
+                VerticalOptions="End">
+                <Label
+                    TextColor="{StaticResource Footer}"
+                    FontSize="10"
+                    HorizontalOptions="Center"
+                    VerticalOptions="End">2017-Centro de Estudios de Posgrado UFA-ESPE.
+                </Label>
+               
+                <Label
+                    TextColor="{StaticResource Footer}"
+                    FontSize="10"
+                    VerticalOptions="End"
+                    HorizontalOptions="Center">Todos los derechos reservados.
+                </Label>
+            </StackLayout>    
+        </ListView.Footer>
+
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell  >
+                    <Grid Padding='50,10,5,5'>
+                        <Grid.GestureRecognizers>
+                          <TapGestureRecognizer Command="{Binding NavigateCommand}">
+                          </TapGestureRecognizer>
+                        </Grid.GestureRecognizers>
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition  Width="Auto" ></ColumnDefinition>
+                            <ColumnDefinition Width="*" ></ColumnDefinition>
+                            
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20" ></RowDefinition>
+                            <RowDefinition Height="20" ></RowDefinition>
+                           
+                         </Grid.RowDefinitions>
+                        <Image 
+                            VerticalOptions="Center"
+                            WidthRequest="20"
+                            HeightRequest="20"
+                            Source="{Binding icon}"></Image>
+                        <Label 
+                             VerticalOptions="Center"
+                            Grid.Column="1"
+                            FontSize="13"
+                            TextColor="{StaticResource FontColorMenu}"
+                            Text="{Binding title}">
+                            <Label.FontFamily>
+                         <OnPlatform x:TypeArguments="x:String">
+                          <OnPlatform.iOS>Helvetica-Light</OnPlatform.iOS>
+                          <OnPlatform.Android>Roboto-Light</OnPlatform.Android>
+                          <OnPlatform.WinPhone></OnPlatform.WinPhone>
+                         </OnPlatform>
+                         </Label.FontFamily>
+                        </Label>
+                         
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+   </ListView>
+</ContentPage>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="PosgradosIOS.Pages.ContactUsPage"
+    Title="Contáctanos">
+	 <ScrollView>
+        <StackLayout Padding="40">
+            <Label Text="Tienes alguna duda?" FontSize="25" FontAttributes="Bold" HorizontalOptions="Center">
+                <Label.FontFamily>
+                 <OnPlatform x:TypeArguments="x:String">
+                          <OnPlatform.iOS>Helvetica</OnPlatform.iOS>
+                          <OnPlatform.Android>Roboto-Light</OnPlatform.Android>
+                          <OnPlatform.WinPhone></OnPlatform.WinPhone>
+                         </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <Label Text="Escribenos estaremos gustosos en ayudarte!" FontAttributes="Italic">
+            <Label.FontFamily>
+                 <OnPlatform x:TypeArguments="x:String">
+                          <OnPlatform.iOS>Helvetica-Light</OnPlatform.iOS>
+                          <OnPlatform.Android>Roboto-Light</OnPlatform.Android>
+                          <OnPlatform.WinPhone></OnPlatform.WinPhone>
+                         </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <Button
+            BackgroundColor="{StaticResource MainColor}"
+            TextColor="{StaticResource FontColorMenu}"
+            Text="Escribir Mensaje"
+            Clicked="emailClick"
+            ></Button>
+            <Button
+            BackgroundColor="{StaticResource MainColor}"
+            TextColor="{StaticResource FontColorMenu}"
+            Text="Llamar"
+            Clicked="phoneCallClick"    >
+            </Button>
+            <Label Text="*No olvides digitar la extensión 2550" FontSize="12"></Label>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

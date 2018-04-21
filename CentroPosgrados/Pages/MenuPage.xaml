@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="CentroPosgrados.Pages.MenuPage"
+    BackgroundColor="{StaticResource MenuColor}"
+    Title="Menú"
+    Icon="ic_action_dehaze.png"
+    BindingContext="{Binding main, Source={StaticResource Locator}}">
+	<ListView
+        ItemsSource="{Binding menu}"
+        HasUnevenRows="false">
+        <ListView.Header>
+            <StackLayout Padding='30,30,30,30'>
+                <Image
+                Source="menuBase.png"
+                ></Image>
+            </StackLayout>
+        </ListView.Header>
+        <ListView.Footer>
+            <StackLayout Padding='10,10,10,10'
+                HorizontalOptions="Center"
+                VerticalOptions="End">
+                <Label
+                    TextColor="{StaticResource Footer}"
+                    FontSize="Micro"
+                    HorizontalOptions="Center"
+                    VerticalOptions="End">2017-Centro de Estudios de Posgrado UFA-ESPE.
+                </Label>
+                <Label
+                    TextColor="{StaticResource Footer}"
+                    FontSize="Micro"
+                    VerticalOptions="End"
+                    HorizontalOptions="Center">Todos los derechos reservados.
+                </Label>
+            </StackLayout>    
+        </ListView.Footer>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell >
+                    <Grid Padding='40,20,5,5'>
+                        <Grid.GestureRecognizers>
+                          <TapGestureRecognizer Command="{Binding NavigateCommand}">
+                          </TapGestureRecognizer>
+                        </Grid.GestureRecognizers>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" ></ColumnDefinition>
+                            <ColumnDefinition Width="*" ></ColumnDefinition>
+                            
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20" ></RowDefinition>
+                            <RowDefinition Height="20" ></RowDefinition>
+                           
+                         </Grid.RowDefinitions>
+                        <Image 
+                            VerticalOptions="Center"
+                            WidthRequest="40"
+                            HeightRequest="40"
+                            Source="{Binding icon}"></Image>
+                        <Label 
+                             VerticalOptions="Center"
+                            Grid.Column="1"
+                            TextColor="{StaticResource FontColorMenu}"
+                            Text="{Binding title}"></Label>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
